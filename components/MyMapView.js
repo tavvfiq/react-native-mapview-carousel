@@ -104,7 +104,7 @@ export default function MyMapView() {
       onMomentumScrollEnd={(event) => {
         const {contentOffset} = event.nativeEvent;
         const {x} = contentOffset;
-        const idx = Math.floor((x / (CARD_WIDTH + 10)) + 1);
+        const idx = Math.round((x / (CARD_WIDTH + 10)) + 1);
         region.timing({
           latitude: parseFloat(data[idx].lat),
           longitude: parseFloat(data[idx].lng),
